@@ -1,0 +1,90 @@
+'use strict';
+
+exports.POST_controllers_api_Subscriptions$_createSubscription = function(subscription) {
+
+  var examples = {};
+  
+  examples['application/json'] = {
+  "amount" : 123,
+  "clientId" : "aeiou",
+  "externalId" : {
+    "externalId" : "aeiou"
+  },
+  "extActivationDate" : "2015-04-10T21:44:27.873+0000",
+  "extCreationInstant" : "2015-04-10T21:44:27.873+0000",
+  "subsInterval" : {
+    "hours" : 123,
+    "seconds" : 123,
+    "months" : 123,
+    "weeks" : 123,
+    "periodType" : {
+      "name" : "aeiou"
+    },
+    "minutes" : 123,
+    "fieldTypes" : [ {
+      "name" : "aeiou"
+    } ],
+    "values" : [ 123 ],
+    "days" : 123,
+    "millis" : 123,
+    "years" : 123
+  },
+  "extEndDate" : "2015-04-10T21:44:27.873+0000",
+  "canceledAt" : "2015-04-10T21:44:27.873+0000",
+  "name" : "aeiou",
+  "classifiers" : "",
+  "planId" : "aeiou",
+  "extLastModifiedInstant" : "2015-04-10T21:44:27.873+0000",
+  "status" : ""
+};
+  
+
+  
+  if(Object.keys(examples).length > 0)
+    return examples[Object.keys(examples)[0]];
+  
+}
+exports.PUT_controllers_api_Subscriptions$_changeStatus = function(subscriptionStatusChange) {
+
+  var examples = {};
+  
+  examples['application/json'] = {
+  "amount" : 123,
+  "clientId" : "aeiou",
+  "externalId" : {
+    "externalId" : "aeiou"
+  },
+  "extActivationDate" : "2015-04-10T21:44:27.876+0000",
+  "extCreationInstant" : "2015-04-10T21:44:27.876+0000",
+  "subsInterval" : {
+    "hours" : 123,
+    "seconds" : 123,
+    "months" : 123,
+    "weeks" : 123,
+    "periodType" : {
+      "name" : "aeiou"
+    },
+    "minutes" : 123,
+    "fieldTypes" : [ {
+      "name" : "aeiou"
+    } ],
+    "values" : [ 123 ],
+    "days" : 123,
+    "millis" : 123,
+    "years" : 123
+  },
+  "extEndDate" : "2015-04-10T21:44:27.876+0000",
+  "canceledAt" : "2015-04-10T21:44:27.876+0000",
+  "name" : "aeiou",
+  "classifiers" : "",
+  "planId" : "aeiou",
+  "extLastModifiedInstant" : "2015-04-10T21:44:27.876+0000",
+  "status" : ""
+};
+  
+
+  
+  if(Object.keys(examples).length > 0)
+    return examples[Object.keys(examples)[0]];
+  
+}

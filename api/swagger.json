@@ -1,0 +1,580 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "produces": ["application/json"],
+  "host": "localhost:8080",
+  "basePath": "/",
+  "paths": {
+  
+  "/api/plans": {
+    "post": {
+      "x-swagger-router-controller": "Apiplans",
+      "tags": ["Apiplans"],
+      "operationId": "POST_controllers_api_Plans$_create",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "plan",
+  "description" : "The plan representation in JSON of the plan to be created",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/Plan"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK: The plan that was just created",
+  "schema" : {
+    "$ref" : "#/definitions/Plan"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Error: If an error occurs. The reason/cause(s) should be stated in the response",
+  "schema" : {
+    "$ref" : "#/definitions/APIError"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/api/plans/jsonArray": {
+    "post": {
+      "x-swagger-router-controller": "Apiplans",
+      "tags": ["Apiplans"],
+      "operationId": "POST_controllers_api_Plans$_createFromArray",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "plans",
+  "description" : "The plan representation in JSON of the plan to be created",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/Plan"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK: The plan that was just created",
+  "schema" : {
+    "$ref" : "#/definitions/Plan"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Error: If an error occurs. The reason/cause(s) should be stated in the response",
+  "schema" : {
+    "$ref" : "#/definitions/APIError"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/api/clients": {
+    "post": {
+      "x-swagger-router-controller": "Apiclients",
+      "tags": ["Apiclients"],
+      "operationId": "POST_controllers_api_Clients$_create",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "client",
+  "description" : "The client representation in JSON of the client to be created",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/Client"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK: The client that was just created",
+  "schema" : {
+    "$ref" : "#/definitions/Client"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Error: If an error occurs. The reason/cause(s) should be stated in the response",
+  "schema" : {
+    "$ref" : "#/definitions/APIError"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/api/clients/jsonArray": {
+    "post": {
+      "x-swagger-router-controller": "Apiclients",
+      "tags": ["Apiclients"],
+      "operationId": "POST_controllers_api_Clients$_createFromArray",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "clients",
+  "description" : "The client representation in JSON of the client to be created",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/Client"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK: The list of clients and their IDs/ExtIDs that was just created",
+  "schema" : {
+    "$ref" : "#/definitions/List"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Error: If an error occurs. The reason/cause(s) should be stated in the response",
+  "schema" : {
+    "$ref" : "#/definitions/APIError"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/api/refunds/{subsExtId}": {
+    "post": {
+      "x-swagger-router-controller": "Apirefunds",
+      "tags": ["Apirefunds"],
+      "operationId": "POST_controllers_api_Refunds$_createRefund",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "refundbean",
+  "description" : "The refund representation in JSON of the refund to be created",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/RefundBean"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK: The refund that was just created",
+  "schema" : {
+    "$ref" : "#/definitions/RefundEvent"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Error: If an error occurs. The reason/cause(s) should be stated in the response",
+  "schema" : {
+    "$ref" : "#/definitions/APIError"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/api/subscriptions": {
+    "post": {
+      "x-swagger-router-controller": "Apisubscriptions",
+      "tags": ["Apisubscriptions"],
+      "operationId": "POST_controllers_api_Subscriptions$_createSubscription",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "subscription",
+  "description" : "The subscription representation in JSON of the subscription to be created",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/Subscription"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK: The subscription that was just created",
+  "schema" : {
+    "$ref" : "#/definitions/Subscription"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Error: If an error occurs. The reason/cause(s) should be stated in the response",
+  "schema" : {
+    "$ref" : "#/definitions/APIError"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/api/subscriptions/{extId}": {
+    "put": {
+      "x-swagger-router-controller": "Apisubscriptions",
+      "tags": ["Apisubscriptions"],
+      "operationId": "PUT_controllers_api_Subscriptions$_changeStatus",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "subscriptionStatusChange",
+  "description" : "The subscription status representation in JSON of the new status",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/SubscriptionStatusChange"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK: The subscription's status changed",
+  "schema" : {
+    "$ref" : "#/definitions/Subscription"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Error: If an error occurs. The reason/cause(s) should be stated in the response",
+  "schema" : {
+    "$ref" : "#/definitions/APIError"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   
+  }, "definitions": {
+  "PeriodType": {
+  "properties" : {
+    "name" : {
+      "type" : "string"
+    }
+  }
+},"RefundBean": {
+  "properties" : {
+    "extId" : {
+      "$ref" : "#/definitions/ExternalId"
+    },
+    "amount" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "dateOfChange" : {
+      "type" : "string",
+      "format" : "date-time"
+    }
+  },
+  "description" : ""
+},"ExternalId": {
+  "properties" : {
+    "externalId" : {
+      "type" : "string"
+    }
+  }
+},"DurationFieldType": {
+  "properties" : {
+    "name" : {
+      "type" : "string"
+    }
+  }
+},"Period": {
+  "properties" : {
+    "hours" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "minutes" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "seconds" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "millis" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "months" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "years" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "days" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "weeks" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "periodType" : {
+      "$ref" : "#/definitions/PeriodType"
+    },
+    "values" : {
+      "type" : "array",
+      "items" : {
+        "type" : "integer",
+        "format" : "int32"
+      }
+    },
+    "fieldTypes" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/DurationFieldType"
+      }
+    }
+  }
+},"List": {
+  "properties" : {
+    "empty" : {
+      "type" : "boolean",
+      "default" : false
+    }
+  }
+},"APIError": {
+  "properties" : {
+    "reason" : {
+      "type" : "string"
+    },
+    "cause" : {
+      "$ref" : "#/definitions/Throwable"
+    },
+    "message" : {
+      "type" : "string"
+    },
+    "localizedMessage" : {
+      "type" : "string"
+    },
+    "stackTrace" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/StackTraceElement"
+      }
+    },
+    "suppressed" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Throwable"
+      }
+    }
+  },
+  "description" : "A generic error class with a descriptive reason"
+},"Subscription": {
+  "properties" : {
+    "extActivationDate" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "extEndDate" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "subsInterval" : {
+      "$ref" : "#/definitions/Period"
+    },
+    "amount" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "canceledAt" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "status" : {
+      "$ref" : "#/definitions/Status"
+    },
+    "clientId" : {
+      "type" : "string"
+    },
+    "planId" : {
+      "type" : "string"
+    },
+    "classifiers" : {
+      "$ref" : "#/definitions/Map[string,string]"
+    },
+    "externalId" : {
+      "$ref" : "#/definitions/ExternalId"
+    },
+    "extCreationInstant" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "extLastModifiedInstant" : {
+      "type" : "string",
+      "format" : "date-time"
+    }
+  },
+  "description" : ""
+},"RefundEvent": {
+  "properties" : {
+    "originalAmount" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "subsId" : {
+      "$ref" : "#/definitions/ExternalId"
+    },
+    "amount" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "id" : {
+      "$ref" : "#/definitions/Object"
+    },
+    "externalId" : {
+      "$ref" : "#/definitions/ExternalId"
+    },
+    "client" : {
+      "$ref" : "#/definitions/Client"
+    },
+    "subscription" : {
+      "$ref" : "#/definitions/Subscription"
+    },
+    "extCreationInstant" : {
+      "type" : "string",
+      "format" : "date-time"
+    }
+  }
+},"Client": {
+  "properties" : {
+    "name" : {
+      "type" : "string"
+    },
+    "email" : {
+      "type" : "string"
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "classifiers" : {
+      "$ref" : "#/definitions/Map[string,string]"
+    },
+    "externalId" : {
+      "$ref" : "#/definitions/ExternalId"
+    },
+    "extCreationInstant" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "extLastModifiedInstant" : {
+      "type" : "string",
+      "format" : "date-time"
+    }
+  },
+  "description" : ""
+},"Plan": {
+  "properties" : {
+    "amount" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "currency" : {
+      "type" : "string"
+    },
+    "metaDescription" : {
+      "type" : "string"
+    },
+    "planInterval" : {
+      "$ref" : "#/definitions/Period"
+    },
+    "state" : {
+      "$ref" : "#/definitions/PlanState"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "classifiers" : {
+      "$ref" : "#/definitions/Map[string,string]"
+    },
+    "externalId" : {
+      "$ref" : "#/definitions/ExternalId"
+    },
+    "extCreationInstant" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "extLastModifiedInstant" : {
+      "type" : "string",
+      "format" : "date-time"
+    }
+  },
+  "description" : ""
+},"SubscriptionStatusChange": {
+  "properties" : {
+    "newStatus" : {
+      "$ref" : "#/definitions/Status"
+    },
+    "dateOfChange" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "force" : {
+      "type" : "boolean",
+      "default" : false
+    }
+  },
+  "description" : ""
+}
+  }
+}
